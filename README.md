@@ -207,7 +207,7 @@ For help or questions, write in Russian or English [on the forum](https://abuyfi
 **Совместимость:** Cotonti Siena 0.9.26+  
 **PHP:** 8.1 – 8.3
 
-Разрабатывалось специально для бесплатной стартовой сборки маркетплейса, а демонстрацию работы можно увидеть здесь.
+Разрабатывалось специально для бесплатной стартовой сборки маркетплейса [marketplace 2waydeal build](https://github.com/webitproff/cot_2waydeal_build), а демонстрацию работы можно увидеть [здесь](https://abuyfile.com/).
 
 ## Обзор
 
