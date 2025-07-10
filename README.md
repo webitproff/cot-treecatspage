@@ -195,6 +195,33 @@ If you need to adjust the category list elements, they are located in the templa
 
 `plugins/treecatspage/tpl/treecatspage.page.tree.tpl`
 
+---
+## Important note ## 
+
+if you have installed the plugin on a site where my theme ["CleanCot"](https://cleancot.previewit.work/) is already installed for Cotonti. 
+
+1. Open the file 
+
+`/themes/clean cat/inc/header/true cat page Left Off canvas.tpl`
+
+and in the first line:
+
+```
+<div class="offcanvas offcanvas-start" tabindex="-1" id="treecatspageLeftOffcanvas" aria-labelledby="treecatspageLeftOffcanvasLabel">
+```
+
+adding the `bg-costum-dgrey` class
+
+in other words, the string should look
+like 
+```
+<div class="offcanvas offcanvas-start bg-costum-dgrey" tabindex="-1" id="treecatspageLeftOffcanvas" aria-labelledby="treecatspageLeftOffcanvasLabel">
+```
+now white links of the page module categories are visible on a gray background.
+
+Who's interested, the theme is ["CleanCot"](https://github.com/webitproff/cot-CleanCot) download for free from Github.
+---
+
 For help or questions, write in Russian or English [on the forum](https://abuyfile.com/ru/forums/cotonti/custom/plugs)
 
 09 July 2025, [webitproff](https://github.com/webitproff)
@@ -390,6 +417,31 @@ if (Cot::$cfg['headrc_consolidate']) {
 
 `plugins/treecatspage/tpl/treecatspage.page.tree.tpl`
 
+---
+## Важное замечание ## 
+
+если вы установили плагин на сайт, где уже установлена моя тема ["CleanCot"](https://cleancot.previewit.work/) для Cotonti. 
+
+1. Открываем файл 
+
+`/themes/cleancot/inc/header/treecatspageLeftOffcanvas.tpl`
+
+и в первой строке:
+
+```
+<div class="offcanvas offcanvas-start" tabindex="-1" id="treecatspageLeftOffcanvas" aria-labelledby="treecatspageLeftOffcanvasLabel">
+```
+
+добавляем класс `bg-costum-dgrey`
+
+то есть строка должна иметь вид
+```
+<div class="offcanvas offcanvas-start bg-costum-dgrey" tabindex="-1" id="treecatspageLeftOffcanvas" aria-labelledby="treecatspageLeftOffcanvasLabel">
+```
+теперь на сером фоне видны белые ссылки категорий модуля страниц.
+
+Кому интересно, тема ["CleanCot"](https://github.com/webitproff/cot-CleanCot) скачать бесплатно с Github.
+---
 Если нужна помощь или есть вопросы, пишите на русском или английском на [форуме](https://abuyfile.com/ru/forums/cotonti/custom/plugs)
 
 09 Июль 2025 г., [webitproff](https://github.com/webitproff)
