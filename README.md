@@ -113,7 +113,7 @@ Save and close the file; it’s no longer needed.
 insert the following code:
 
 ```
-<!-- IF {PHP|cot_module_active('page')} -->
+<!-- IF {PHP|cot_module_active('page')} AND {PHP|cot_plugin_active('treecatspage')} -->
 <hr class="my-2">
 <li class="nav-item">
 <a class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#treecatspageLeftOffcanvas" aria-controls="treecatspageLeftOffcanvas">
@@ -149,7 +149,7 @@ In the same `header.tpl`, for example, before or instead of:
 insert the following code:
 
 ```
-<!-- IF {PHP|cot_module_active('page')} -->
+<!-- IF {PHP|cot_module_active('page')} AND {PHP|cot_plugin_active('treecatspage')} -->
 <li>
 <a type="button" data-bs-toggle="offcanvas" data-bs-target="#treecatspageLeftOffcanvas" aria-controls="treecatspageLeftOffcanvas">
   <span class="me-2">
@@ -335,7 +335,7 @@ For help or questions, write in Russian or English [on the forum](https://abuyfi
 вставляем код:
 
 ```
-<!-- IF {PHP|cot_module_active('page')} -->
+<!-- IF {PHP|cot_module_active('page')} AND {PHP|cot_plugin_active('treecatspage')} -->
 <hr class="my-2">
 <li class="nav-item">
 <a class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#treecatspageLeftOffcanvas" aria-controls="treecatspageLeftOffcanvas">
@@ -371,7 +371,7 @@ For help or questions, write in Russian or English [on the forum](https://abuyfi
 вставляем код:
 
 ```
-<!-- IF {PHP|cot_module_active('page')} -->
+<!-- IF {PHP|cot_module_active('page')} AND {PHP|cot_plugin_active('treecatspage')} -->
 <li>
 <a type="button" data-bs-toggle="offcanvas" data-bs-target="#treecatspageLeftOffcanvas" aria-controls="treecatspageLeftOffcanvas">
   <span class="me-2">
