@@ -172,12 +172,12 @@ if (Cot::$cfg['headrc_consolidate']) {
 }
 ```
 
-4. To ensure the menu with subcategories works correctly and opens child categories when clicking on a parent category, check if you have a `functions.custom.php` file in the `system` folder.  
+#### 4. To ensure the menu with subcategories works correctly and opens child categories when clicking on a parent category, check if you have a `functions.custom.php` file in the `system` folder. #### 
 4.1. If the file does not exist, upload `functions.custom.php` to the `system` folder and proceed to step 5.  
 4.2. If the file exists, open it and check if it contains the `cot_load_structure_custom()` function.  
 4.3. You can keep it as is if it’s present or update it.
 
-5. Ensure that `functions.custom.php` is enabled.  
+#### 5. Ensure that `functions.custom.php` is enabled. ####  
 5.2. Open the configuration file `/datas/config.php` and around line 89, verify that the following setting is present:  
 
 `$cfg['customfuncs'] = true;`
