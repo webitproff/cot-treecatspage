@@ -2,7 +2,7 @@
 
 **Version:** 1.0  
 **Compatibility:** Cotonti Siena 0.9.26+  
-**PHP:** 8.1 – 8.3
+**PHP:** 8.1 – 8.4
 
 Developed specifically for the free starter [marketplace build](https://github.com/webitproff/cot_2waydeal_build), a demonstration of its functionality can be seen [here](https://abuyfile.com/).
 
