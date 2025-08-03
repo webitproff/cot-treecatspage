@@ -10,6 +10,7 @@
           <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-			{PHP|cot_build_structure_page_tree('', '')}
+			{PHP|cot_treecatspage_build_structure_page_tree('', '')}
         </div>
+
       </div>
