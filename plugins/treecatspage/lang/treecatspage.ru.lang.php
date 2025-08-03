@@ -14,4 +14,4 @@ defined('COT_CODE') or die('Wrong URL.');
  */
 $L['info_name'] = 'Tree Cats Page';
 $L['info_desc'] = 'Дерево категорий для модуля страниц выводим в любом месте шаблона глобально.';
-$L['info_notes'] = "Вызов функции в шаблоне <code>{PHP|cot_build_structure_page_tree('', '')}</code>";
+$L['info_notes'] = "Вызов функции в шаблоне <code>{PHP|cot_treecatspage_build_structure_page_tree('', '')}</code>";

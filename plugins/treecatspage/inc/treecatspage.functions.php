@@ -35,7 +35,7 @@ $c = cot_import('c', 'G', 'TXT'); // код категории
  * @param string $template Файл шаблона для использования (зарезервировано)
  * @return string|bool Отрендеренный HTML для дерева категорий или false, если нет дочерних элементов
  */
-function cot_build_structure_page_tree($parent = '', $selected = '', $level = 0, $template = '')
+function cot_treecatspage_build_structure_page_tree($parent = '', $selected = '', $level = 0, $template = '')
 {
     // Доступ к глобальным переменным для конфигурации, базы данных и системных данных
     global $structure, $cfg, $db, $sys, $cot_extrafields, $db_structure, $db_pages;
@@ -205,7 +205,7 @@ function cot_build_structure_page_tree($parent = '', $selected = '', $level = 0,
             // Проверка, выбрана ли категория
             "ROW_SELECTED" => ((is_array($selected) && in_array($row, $selected)) || (!is_array($selected) && $row == $selected)) ? 1 : 0,
             // Рекурсивное построение дерева подкатегорий
-            "ROW_SUBCAT" => !empty($subcats) ? cot_build_structure_page_tree($row, $selected, $level + 1) : '',
+            "ROW_SUBCAT" => !empty($subcats) ? cot_treecatspage_build_structure_page_tree($row, $selected, $level + 1) : '',
             // Назначение текущего уровня
             "ROW_LEVEL" => $level,
             // Генерация класса для чётности/нечётности строки
