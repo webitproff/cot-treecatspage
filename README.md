@@ -224,7 +224,7 @@ Who's interested, the theme is ["CleanCot"](https://github.com/webitproff/cot-Cl
 
 For help or questions, write in Russian or English [on the forum](https://abuyfile.com/ru/forums/cotonti/custom/plugs)
 
-09 July 2025, [webitproff](https://github.com/webitproff)
+22 Aug 2025, [webitproff](https://github.com/webitproff)
 
 ---
 
@@ -232,7 +232,7 @@ For help or questions, write in Russian or English [on the forum](https://abuyfi
 
 **Версия:** 1.0  
 **Совместимость:** Cotonti Siena 0.9.26+  
-**PHP:** 8.1 – 8.3
+**PHP:** 8.1 – 8.4+
 
 Разрабатывалось специально для бесплатной стартовой сборки маркетплейса [marketplace 2waydeal build](https://github.com/webitproff/cot_2waydeal_build), а демонстрацию работы можно увидеть [здесь](https://abuyfile.com/).
 
@@ -444,4 +444,4 @@ if (Cot::$cfg['headrc_consolidate']) {
 ---
 Если нужна помощь или есть вопросы, пишите на русском или английском на [форуме](https://abuyfile.com/ru/forums/cotonti/custom/plugs)
 
-09 Июль 2025 г., [webitproff](https://github.com/webitproff)
+22 Aug 2025, [webitproff](https://github.com/webitproff)
