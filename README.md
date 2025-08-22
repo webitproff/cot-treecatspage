@@ -417,6 +417,41 @@ if (Cot::$cfg['headrc_consolidate']) {
 
 `plugins/treecatspage/tpl/treecatspage.page.tree.tpl`
 
+## Визуализация процесса 
+
+    _____________________________
+    |                            |
+    | 1. Загрузка и Установка    |
+    | 	 плагина по инструкции   |
+    |____________________________|
+               |
+               V
+    ______________________________
+    |                             |
+    | 2. Редактируем header.tpl   | ----> Подключаем treecatspageLeftOffcanvas.tpl, в котором вызываем функцию
+    |_____________________________|       {PHP|cot_treecatspage_build_structure_page_tree('', '')}
+               |
+               V
+    ____________________________
+    |                          |
+    | 3. Правка меню сайта     | ----> вызываем treecatspageLeftOffcanvas.tpl в sidebarMenuSections.tpl
+    |__________________________|       <a class="nav-link" 
+               |	                   type="button" 
+               |					   data-bs-toggle="offcanvas" 
+               |					   data-bs-target="#treecatspageLeftOffcanvas" 
+               |					   aria-controls="treecatspageLeftOffcanvas">
+               |					   <span class="me-2">
+               |					   <i class="fa-regular fa-newspaper me-2"></i>
+               |					   </span>{PHP.L.2wd_Publications}
+               |					   </a>
+               |
+               V
+    _____________________________________
+    |                                    |
+    |	4. Установка плагина завершена!  |
+    |____________________________________|
+
+    
 ---
 ## Важное замечание ## 
 
