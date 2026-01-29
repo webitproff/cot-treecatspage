@@ -1,3 +1,5 @@
+** v.2.0.0 from 29 Jan 2026 ** 
+корректный подсчет + кликабельность родительских категорий наряду с расскрывающимся списком дочерних
 <!-- BEGIN: MAIN -->
 <ul<!-- IF {LEVEL} == 0 --> class="nav flex-column"<!-- ELSE --> class="nav flex-column ps-3"<!-- ENDIF -->>
 	<!-- IF {LEVEL} == 0 -->
@@ -46,4 +48,5 @@
 	
 </ul>
 <!-- END: MAIN -->
+
 
