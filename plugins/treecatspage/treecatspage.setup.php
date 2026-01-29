@@ -6,8 +6,8 @@ Code=treecatspage
 Name=Tree Cats Page
 Category=navigation-structure
 Description=The category tree for the page module is displayed globally anywhere in the template. 
-Version=1.0.1
-Date=03.08.2025
+Version=2.0.0
+Date=29.01.2026
 Author=Webitproff
 Copyright=Copyright (c) Webitproff
 Notes=
@@ -27,8 +27,9 @@ blacktreecatspage=01:string:::Category codes (black list codes page structure as
 
 /**
  * File treecatspage.setup.php for Tree Cats Page
- *
+ * v.2.0.0 from 29 Jan 2026 ** корректный подсчет + кликабельность родительских категорий наряду с расскрывающимся списком дочерних
  * @package treecatspage
  * @copyright (c) Cotonti
- * @license https://github.com/Cotonti/Cotonti/blob/master/License.txt
+ * @license BSD
  */
+
