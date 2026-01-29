@@ -13,17 +13,29 @@
 	<!-- BEGIN: CATS -->
 	<li class="nav-item">
 		<!-- IF {ROW_SUBCAT} -->
-		<a class="nav-link d-flex align-items-center" data-bs-toggle="collapse" href="#collapse-{ROW_ID}" role="button" aria-expanded="false">
-			<i class="fa-regular fa-folder me-2"></i>
-			<span>{ROW_TITLE}</span>
-			<span class="ms-auto">({ROW_COUNT})</span>
-			<i class="fas fa-angle-down ms-2"></i>
-		</a>
+		<div class="d-flex align-items-center">
+			<!-- Полноценная ссылка на категорию (занимает всё пространство кроме стрелки) -->
+			<a href="{ROW_HREF}" class="nav-link flex-grow-1 d-flex align-items-center text-decoration-none text-reset<!-- IF {ROW_SELECTED} --> active<!-- ENDIF -->">
+				<i class="fa-regular fa-folder me-2"></i>
+				<span>{ROW_TITLE}</span>
+				<span class="ms-auto">({ROW_COUNT})</span>
+			</a>
+			
+			<!-- Стрелка — ТОЛЬКО toggle, НЕ ссылка -->
+			<button type="button" class="btn btn-link text-reset px-2 py-0"
+            data-bs-toggle="collapse"
+            data-bs-target="#collapse-{ROW_ID}"
+            aria-expanded="false"
+            aria-controls="collapse-{ROW_ID}">
+				<i class="fa fa-angle-down text-bg-info p-1"></i>
+			</button>
+		</div>
+		
 		<div class="collapse" id="collapse-{ROW_ID}">
 			{ROW_SUBCAT}
 		</div>
 		<!-- ELSE -->
-		<a href="{ROW_HREF}" class="nav-link d-flex align-items-center<!-- IF {ROW_SELECTED} --> active<!-- ENDIF -->" title="{ROW_TITLE}">
+		<a href="{ROW_HREF}" class="nav-link d-flex align-items-center<!-- IF {ROW_SELECTED} --> active<!-- ENDIF -->">
 			<i class="fa-solid fa-file me-2"></i>
 			<span>{ROW_TITLE}</span>
 			<span class="ms-auto">({ROW_COUNT})</span>
@@ -31,5 +43,7 @@
 		<!-- ENDIF -->
 	</li>
 	<!-- END: CATS -->
+	
 </ul>
 <!-- END: MAIN -->
+
