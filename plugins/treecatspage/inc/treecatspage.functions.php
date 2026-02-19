@@ -133,8 +133,34 @@ function cot_build_structure_page_tree($parent = '', $selected = '', $level = 0,
         return false;
     }
 
-    $mskin = cot_tplfile('treecatspage.page.tree', 'plug');
-    $t1 = new XTemplate($mskin);
+	// присваиваем шаблону имя части и/или локации расширения
+	$tpl_ExtCode          = 'treecatspage';   // код плагина
+	$tpl_PartExt          = 'page';                   // область редактирования
+	$tpl_PartExtSecond    = 'tree';                   // что
+	$tpl_PartCostumTpl    = $template;                // подставляем свой шаблон, если нужно
+
+	// Загружаем шаблон 
+	$extTplFile = cot_tplfile(
+			[
+			$tpl_ExtCode, 
+			$tpl_PartExt, 
+			$tpl_PartExtSecond,
+			$tpl_PartCostumTpl
+			], 
+			'plug', 
+			true
+		);
+	$t1 = new XTemplate($extTplFile);
+	
+/* 
+ *    создаем свой $extTplFile
+ *    /themes/index36/plugins/treecatspage/treecatspage.page.tree.sidebar.tpl	
+ * 
+ *    подключаем его глобально
+ *    <!-- IF {PHP|function_exists('cot_build_structure_page_tree')} AND {PHP|cot_auth('page', 'any', 'R')} -->
+ *    {PHP|cot_build_structure_page_tree('', '', 0, 'sidebar')}
+ *    <!-- ENDIF -->
+ */
 
     /* === Hook === */
     foreach (cot_getextplugins('page.tree.main') as $pl) {
@@ -215,3 +241,4 @@ function cot_build_structure_page_tree($parent = '', $selected = '', $level = 0,
     return $t1->text('MAIN');
 }
 ?>
+
