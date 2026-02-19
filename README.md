@@ -229,7 +229,36 @@ For help or questions, write in Russian or English [on the forum](https://abuyfi
 22 Aug 2025, [webitproff](https://github.com/webitproff)
 
 ---
+```
+	// присваиваем шаблону имя части и/или локации расширения
+	$tpl_ExtCode          = 'treecatspage';   // код плагина
+	$tpl_PartExt          = 'page';                   // область редактирования
+	$tpl_PartExtSecond    = 'tree';                   // что
+	$tpl_PartCostumTpl    = $template;                // подставляем свой шаблон, если нужно
 
+	// Загружаем шаблон 
+	$extTplFile = cot_tplfile(
+			[
+			$tpl_ExtCode, 
+			$tpl_PartExt, 
+			$tpl_PartExtSecond,
+			$tpl_PartCostumTpl
+			], 
+			'plug', 
+			true
+		);
+	$t1 = new XTemplate($extTplFile);
+	
+/* 
+ *    создаем свой $extTplFile
+ *    /themes/index36/plugins/treecatspage/treecatspage.page.tree.sidebar.tpl	
+ * 
+ *    подключаем его глобально
+ *    <!-- IF {PHP|function_exists('cot_build_structure_page_tree')} AND {PHP|cot_auth('page', 'any', 'R')} -->
+ *    {PHP|cot_build_structure_page_tree('', '', 0, 'sidebar')}
+ *    <!-- ENDIF -->
+ */
+```
 # Плагин Tree Cats Page для Cotonti Siena 0.9.26
 
 **Версия:** 1.0  
