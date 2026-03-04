@@ -284,8 +284,8 @@ For help or questions, write in Russian or English [on the forum](https://abuyfi
  *    /themes/index36/plugins/treecatspage/treecatspage.page.tree.sidebar.tpl	
  * 
  *    подключаем его глобально
- *    <!-- IF {PHP|function_exists('cot_build_structure_page_tree')} AND {PHP|cot_auth('page', 'any', 'R')} -->
- *    {PHP|cot_build_structure_page_tree('', '', 0, 'sidebar')}
+ *    <!-- IF {PHP|function_exists('cot_treecatspage_build_structure_page_tree')} AND {PHP|cot_auth('page', 'any', 'R')} -->
+ *    {PHP|cot_treecatspage_build_structure_page_tree('', '', 0, 'sidebar')}
  *    <!-- ENDIF -->
  */
 ```
