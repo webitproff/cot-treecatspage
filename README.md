@@ -3,6 +3,20 @@
 **Version:** 1.0  
 **Compatibility:** Cotonti Siena 0.9.26+  
 **PHP:** 8.1 – 8.4
+___
+
+> ⚠️ **Warning!**
+> Due to necessary changes, the function has been renamed:
+> **Old name:** `cot_build_structure_page_tree`
+> **New name:** `cot_treecatspage_build_structure_page_tree`
+>
+> If any theme/build shows an error after installation or update, simply replace the function name with the new one.
+>
+> You can ask questions and get support here:
+> [https://abuyfile.com/ru/forums/cotonti/custom/plugs](https://abuyfile.com/ru/forums/cotonti/custom/plugs)
+
+____
+
 
 ## [DEMONSTRATION MENU Tree Cats Page](https://abuyfile.com/en/usersblog)
 
@@ -259,11 +273,27 @@ For help or questions, write in Russian or English [on the forum](https://abuyfi
  *    <!-- ENDIF -->
  */
 ```
+
+# Russian
 # Плагин Tree Cats Page для Cotonti Siena 0.9.26
 
 **Версия:** 1.0  
 **Совместимость:** Cotonti Siena 0.9.26+  
 **PHP:** 8.1 – 8.4+
+
+___
+> ⚠️ **Внимание!**
+> В связи с необходимыми изменениями функция была переименована:
+> 
+> **Старое имя:** `cot_build_structure_page_tree`
+> **Новое имя:** `cot_treecatspage_build_structure_page_tree`
+>
+> Если в какой-либо теме/сборке возникла ошибка после установки или обновления — просто замените имя функции на новое.
+>
+> Задать вопрос и получить помощь можно по ссылке:
+> [https://abuyfile.com/ru/forums/cotonti/custom/plugs](https://abuyfile.com/ru/forums/cotonti/custom/plugs)
+___
+
 
 Разрабатывалось специально для бесплатной стартовой сборки маркетплейса [marketplace 2waydeal build](https://github.com/webitproff/cot_2waydeal_build), а демонстрацию работы можно увидеть [здесь](https://abuyfile.com/).
 
