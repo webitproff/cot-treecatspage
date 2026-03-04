@@ -1,12 +1,20 @@
 <?php
-
 /**
- * File treecatspage.functions.php for Tree Cats Page
- * v.2.0.0 from 29 Jan 2026
+ * Tree Cats Page (tree of page categories anywhere)
+ * Plugin treecatspage for Cotonti 0.9.26, PHP 8.4+
+ * Filename: treecatspage.functions.php 
+ * Purpose: functions
+ * Date: March 4Th, 2026
+ * Source: https://github.com/webitproff/cot-treecatspage
+ * WepPage: https://abuyfile.com/ru/market/cotonti/plugs/plagin-tree-cats-page-dlya-cotonti-siena-0926
+ *
  * @package treecatspage
- * @copyright (c) webitproff
+ * @version 2.2.27
+ * @author webitproff
+ * @copyright Copyright (c) webitproff 2026 | https://github.com/webitproff
  * @license BSD
- */
+ */  
+
 
 
 defined('COT_CODE') or die('Неверный URL.');
@@ -28,7 +36,7 @@ $c = cot_import('c', 'G', 'TXT'); // код категории
  * - Подсчёт снизу вверх
  * - static-кэш на всё время работы скрипта
  */
-function cot_build_structure_page_tree($parent = '', $selected = '', $level = 0, $template = '')
+function cot_treecatspage_build_structure_page_tree($parent = '', $selected = '', $level = 0, $template = '')
 {
     global $structure, $cfg, $db, $sys, $cot_extrafields, $db_structure, $db_pages;
     global $i18n_notmain, $i18n_locale, $i18n_write, $i18n_admin, $i18n_read, $db_i18n_pages;
@@ -157,8 +165,8 @@ function cot_build_structure_page_tree($parent = '', $selected = '', $level = 0,
  *    /themes/index36/plugins/treecatspage/treecatspage.page.tree.sidebar.tpl	
  * 
  *    подключаем его глобально
- *    <!-- IF {PHP|function_exists('cot_build_structure_page_tree')} AND {PHP|cot_auth('page', 'any', 'R')} -->
- *    {PHP|cot_build_structure_page_tree('', '', 0, 'sidebar')}
+ *    <!-- IF {PHP|function_exists('cot_treecatspage_build_structure_page_tree')} AND {PHP|cot_auth('page', 'any', 'R')} -->
+ *    {PHP|cot_treecatspage_build_structure_page_tree('', '', 0, 'sidebar')}
  *    <!-- ENDIF -->
  */
 
@@ -198,7 +206,7 @@ function cot_build_structure_page_tree($parent = '', $selected = '', $level = 0,
             'ROW_ICON' => $structure['page'][$row]['icon'],
             'ROW_HREF' => cot_url('page', $urlparams),
             'ROW_SELECTED' => ((is_array($selected) && in_array($row, $selected)) || $row == $selected) ? 1 : 0,
-            'ROW_SUBCAT' => cot_build_structure_page_tree($row, $selected, $level + 1),
+            'ROW_SUBCAT' => cot_treecatspage_build_structure_page_tree($row, $selected, $level + 1),
             'ROW_LEVEL' => $level,
             'ROW_ODDEVEN' => cot_build_oddeven($jj),
             'ROW_JJ' => $jj
