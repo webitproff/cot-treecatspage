@@ -7,11 +7,19 @@ ___
 
 > ⚠️ **Warning!**
 > Due to necessary changes, the function has been renamed:
+> 
 > **Old name:** `cot_build_structure_page_tree`
+> 
 > **New name:** `cot_treecatspage_build_structure_page_tree`
 >
 > If any theme/build shows an error after installation or update, simply replace the function name with the new one.
 >
+> True Calling
+> ```
+> <!-- IF {PHP|function_exists('cot_treecatspage_build_structure_page_tree')} AND {PHP|cot_auth('page', 'any', 'R')} -->
+> 	{PHP|cot_treecatspage_build_structure_page_tree('', '', 0, 'sidebar')}
+> <!-- ENDIF -->
+> ```
 > You can ask questions and get support here:
 > [https://abuyfile.com/ru/forums/cotonti/custom/plugs](https://abuyfile.com/ru/forums/cotonti/custom/plugs)
 
@@ -174,6 +182,7 @@ insert the following code:
 </li>
 <!-- ENDIF -->
 ```
+
 
 Save and close the file.
 
