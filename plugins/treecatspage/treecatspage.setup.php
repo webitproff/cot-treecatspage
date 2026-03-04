@@ -6,8 +6,8 @@ Code=treecatspage
 Name=Tree Cats Page
 Category=navigation-structure
 Description=The category tree for the page module is displayed globally anywhere in the template. 
-Version=2.0.0
-Date=29.01.2026
+Version=2.2.27
+Date=March 4Th, 2026
 Author=Webitproff
 Copyright=Copyright (c) Webitproff
 Notes=
@@ -25,11 +25,21 @@ blacktreecatspage=01:string:::Category codes (black list codes page structure as
 [END_COT_EXT_CONFIG]
 ==================== */
 
-/**
- * File treecatspage.setup.php for Tree Cats Page
- * v.2.0.0 from 29 Jan 2026 ** корректный подсчет + кликабельность родительских категорий наряду с расскрывающимся списком дочерних
- * @package treecatspage
- * @copyright (c) Cotonti
- * @license BSD
- */
 
+/**
+ * Tree Cats Page (tree of page categories anywhere)
+ * Plugin treecatspage for Cotonti 0.9.26, PHP 8.4+
+ * Filename: treecatspage.setup.php 
+ * Purpose: Setup & Config File. Register data in $db_core, $db_auth and $db_config for the Plugin
+ * Date: March 4Th, 2026
+ * Note: Correct counting + clickability of parent categories along with a drop-down list of child categories
+ * Source: https://github.com/webitproff/cot-treecatspage
+ * WepPage: https://abuyfile.com/ru/market/cotonti/plugs/plagin-tree-cats-page-dlya-cotonti-siena-0926
+ *
+ * @package treecatspage
+ * @version 2.2.27
+ * @author webitproff
+ * @copyright Copyright (c) webitproff 2026 | https://github.com/webitproff
+ * @license BSD
+ */  
+ 
